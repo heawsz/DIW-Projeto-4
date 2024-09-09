@@ -1,0 +1,280 @@
+/* Definições gerais */
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+main {
+    flex-grow: 1;
+    padding-left: 260px; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-top: 100px;
+    height: auto;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #207DFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+}
+
+/* CSS Carrossel */
+.carrossel {
+    height: 350px;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: margin-left 0.6s ease;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+input {
+    display: none;
+}
+
+/* Navegação */
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 60px;
+    height: 11px;
+    border: 2px solid white;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#slide1:checked ~ .slides {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .slides {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ .slides {
+    margin-left: -200%;
+}
+
+/* CSS Cabeçalho */
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* CSS Rodapé */
+.footer {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* CSS Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Estilizando os cards */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px 0;
+    color: #207DFF;
+}
+
+#price {
+    color: black;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Ajuste responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+        margin-top: 120px; /* Mais espaço abaixo do cabeçalho */
+    }
+
+    /* Espaçamento do cabeçalho */
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Barra lateral responsiva */
+    .sidebar {
+        width: 100%; 
+        padding: 10px;
+        text-align: center;
+        margin-left: 0;
+        order: -1; /* A barra lateral será o primeiro elemento após o cabeçalho */
+        margin-top: 0;
+    }
+
+    .carrossel {
+        margin-top: 20px;
+        order: 2;
+        position: relative;
+        z-index: 1;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; 
+        order: 3;
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    /* Rodapé */
+    .footer {
+        order: 4;
+    }
+}

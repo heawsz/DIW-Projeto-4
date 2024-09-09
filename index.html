@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Shop God Of War</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#">
+            <img class="logo" src="/imagens/logo.png" alt="logo">
+        </a>
+        <nav>
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2>Bom da Guerra Shop</h2>
+            <ul>
+                <li><a href="#">Jogo 1</a></li>
+                <li><a href="#">Jogo 2</a></li>
+                <li><a href="#">Jogo 3</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <figure class="carrossel">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+
+                <div class="slides">
+                    <div class="slide">
+                        <img src="imagens/1.png" alt="Imagem 1">
+                    </div>
+
+                    <div class="slide">
+                        <img src="imagens/2.png" alt="Imagem 2">
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="imagens/3.png" alt="Imagem 3">
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <label class="bar" for="slide1"></label>
+                    <label class="bar" for="slide2"></label>
+                    <label class="bar" for="slide3"></label>
+                </div>
+            </figure>
+
+
+            <section class="grid">
+                <div class="card">
+                    <img src="imagens/GOW1.png" alt="Imagem GOW 1">
+                    <h3>God Of War 1</h3>
+                    <h3 id="price">R$ 99,90</h3>
+                    <p>Uma aventura épica com Kratos.</p>
+                </div>
+
+                <div class="card">
+                    <img src="imagens/GOW2.png" alt="Imagem GOW 2">
+                    <h3>God Of War 2</h3>
+                    <h3 id="price">R$ 119,90</h3>
+                    <p>A continuação emocionante da saga.</p>
+                </div>
+
+                <div class="card">
+                    <img src="imagens/GOW3.png" alt="Imagem GOW 3">
+                    <h3>God Of War 3</h3>
+                    <h3 id="price">R$ 149,90</h3>
+                    <p>Kratos enfrenta os deuses em sua vingança final.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        © 2024 - Erik Cristian de Alcântara Costa
+    </footer>
+</body>
+
+</html>
